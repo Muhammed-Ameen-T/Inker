@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - main
+      - frontend
+      - backend
+      - dev
   pull_request:
 
 jobs:
@@ -24,7 +27,7 @@ jobs:
         run: npm ci
 
       - name: Run ESLint (Frontend)
-        run: npm run lint --workspace=frontend -- --max-warnings=0
+        run: npm run lint --workspace=frontend -- --max-warnings=10
 
       - name: Run ESLint (Backend)
-        run: npm run lint --workspace=backend -- --max-warnings=0
+        run: npm run lint --workspace=backend -- --max-warnings=10

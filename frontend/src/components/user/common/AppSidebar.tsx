@@ -1,4 +1,6 @@
 import { Calendar, Home, Inbox, Search, Settings } from "lucide-react";
+import LightLogo from "../../../assets/Logo Light.svg"
+import DarkLogo from "../../../assets/Logo Dark.svg"
 
 import {
   Sidebar,
@@ -6,10 +8,12 @@ import {
   SidebarGroup,
   SidebarGroupContent,
   SidebarGroupLabel,
+  SidebarHeader,
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
+import { DropdownMenu, DropdownMenuTrigger } from "../../ui/dropdown-menu";
 
 const items = [
   {
@@ -42,6 +46,22 @@ const items = [
 export function AppSidebar() {
   return (
     <Sidebar>
+      <SidebarHeader>
+        <SidebarMenu>
+          <SidebarMenuItem>
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <SidebarMenuButton size="lg">
+                  <div className="w-full flex justify-center items-center">
+                    <img src={LightLogo} alt=""  className="max-w-[100px] dark:hidden"/>
+                    <img src={DarkLogo} alt=""  className="max-w-[100px] dark:block hidden"/>
+                  </div>
+                </SidebarMenuButton>
+              </DropdownMenuTrigger>
+            </DropdownMenu>
+          </SidebarMenuItem>
+        </SidebarMenu>
+      </SidebarHeader>
       <SidebarContent>
         <SidebarGroup>
           <SidebarGroupLabel>Application</SidebarGroupLabel>

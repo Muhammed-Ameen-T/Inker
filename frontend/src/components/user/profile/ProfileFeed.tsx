@@ -11,15 +11,15 @@ const ProfileFeed: FC = () => {
                     <div className="relative">
                     <button
                         key={tab}
-                        className={`px-5 py-2 rounded-lg hover:bg-gray-100 text-md ${
-                            activeTab === tab ? "font-semibold text-black" : "font-medium"
+                        className={`px-5 py-2 rounded-lg text-md dark:hover:bg-neutral-500/10 hover:bg-gray-200/30 ${
+                            activeTab === tab ? "font-semibold dark:text-white " : "font-medium"
                         }`}
                         onClick={() => setActiveTab(tab)}
                     >
                         {tab}
                     </button>
                     {activeTab === tab && (
-                        <div className="absolute bottom-0 left-1/2 w-12 -translate-x-1/2 border-b-2 border-black"></div>
+                        <div className="absolute bottom-0 left-1/2 w-12 -translate-x-1/2 border-b-2 dark:border-white border-black"></div>
                     )}
                 </div>
                 

@@ -1,5 +1,5 @@
-import ProfileFeed from "@/components/profile/ProfileFeed";
-import ProfileInfo from "@/components/profile/ProfileInfo";
+import ProfileFeed from "@/components/user/profile/ProfileFeed";
+import ProfileInfo from "@/components/user/profile/ProfileInfo";
 import { FC } from "react";
 
 const Profile: FC = () => {
